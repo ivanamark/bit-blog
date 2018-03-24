@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-<footer className="py-5 bg-light">
+<footer className="py-5 purple lighten-3">
       <div className="container">
-        <p className="m-0 text-center text">copyright  © 2018 BIT November 2017</p>
+        <p className="m-0 text-center text">Copyright  ©  BIT March 2018</p>
       </div>
       
     </footer>
