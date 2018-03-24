@@ -4,8 +4,8 @@ import React from 'react'
 const Authors = () => {
    
     return (
-        <div class="container">
-          <h5 class="center">AUTHORS(6)</h5>
+        <div className="container">
+          <h5 className="center">AUTHORS(6)</h5>
           <p>Name Surname</p><hr/>
           <p>Name Surname</p><hr/>
           <p>Name Surname</p><hr/>

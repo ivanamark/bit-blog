@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
     return (
      <nav>
-        <div class="nav-wrapper  purple darken-2">
-            <p class="brand-logo">RND BLG</p>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <div className="nav-wrapper  purple darken-2">
+            <p className="brand-logo">RND BLG</p>
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
                             
                                 
                     <li ><Link to='/homepage'>Home</Link></li>
