@@ -3,9 +3,11 @@ import {Header} from '../partials/Header';
 import Footer from '../partials/Footer';
 import {HomePage} from "../Pages/HomePage"
 import {AboutPage} from "../Pages/AboutPage"
-import { Switch, Route,HashRouter } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import {PostPage} from '../partials/PostPage'
 import {Authors} from "../Pages/Authors"
+import { SinglePost } from "../Pages/SinglePost"
+import {SingleAuthor} from "../Pages/SingleAuthor"
 class App extends Component {
   render() {
     return (
@@ -14,9 +16,11 @@ class App extends Component {
          
         <Switch>
           <Route exact path='/homepage' component={HomePage} />
-          {/* <Redirect from='/' to='/homepage' />  */}
+          
            <Route exact path='/about' component={AboutPage} />
            <Route  exact path='/authors' component={Authors} />
+           <Route exact path='/singleauthor' component={SingleAuthor} />
+           <Route exact path='/singlepost' component={SinglePost} />
         </Switch> 
        
         <Footer />
