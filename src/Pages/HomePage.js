@@ -1,38 +1,35 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { SinglePostItem } from './SinglePostItem';
+import { PostsList } from './PostsList';
+import { PostsFetcher } from '../service/PostsFetcher';
 
-const HomePage = () => {
-    return (
-        <div className="container">
-            <h5><Link to='/singlepost'>Post Title</Link></h5>
-
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
+class HomePage extends React.Component {
 
 
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
+    constructor(props) {
+        super(props)
+        this.state = {
+            posts: []
+        }
+    }
 
+    componentDidMount() {
+        PostsFetcher()
+            .then((myPosts) => {
+                this.setState({
+                    posts: myPosts
+                })
+            })
+    }
 
+    render() {
+        return (
+            <div className="container">
+                <PostsList postsList={this.state.posts} />
+            </div>
 
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-            <h5>Post Title</h5>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p><hr />
-        </div>
-
-    )
+        )
+    }
 
 }
 export { HomePage }

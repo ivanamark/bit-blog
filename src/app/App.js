@@ -9,7 +9,7 @@ import { Authors } from "../Pages/Authors"
 import { SinglePost } from "../Pages/SinglePost"
 import { SingleAuthor } from "../Pages/SingleAuthor"
 import { NewPost } from "../Pages/NewPost"
-import { ContentFetcher } from '../service/ContentFetcher'
+
 class App extends Component {
   render() {
     return (
